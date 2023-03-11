@@ -1,0 +1,129 @@
+﻿@model ShopOnline.Models.Topic
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong class="text-uppercase text-danger">Xác nhận xóa các sản phẩm </strong>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="@Url.Action("Index","Topic")" class="btn btn-sm btn-success">
+                        Quay về danh sách
+                    </a>
+                    <input type="submit" value="Delete" class="btn btn-sm btn-danger" />
+                </div>
+
+            </div>
+        </div>
+        <div class="card-body p-3">
+            <div class="alert alert-warning">
+                <strong>Thông báo</strong> Các thông tin bị xóa sẽ biến mất sau khi ấn Delete
+            </div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Slug)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Slug)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ParentID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ParentID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Orders)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Orders)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Metaky)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Metaky)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Metadesc)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Metadesc)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Created_By)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Created_By)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Created_At)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Created_At)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Updated_By)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Updated_By)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Updated_At)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Updated_At)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+
+            </dl>
+        </div>
+        </div>
+}
+            
+               
+
+
+
+
+
